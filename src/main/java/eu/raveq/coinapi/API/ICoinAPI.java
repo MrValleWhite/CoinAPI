@@ -1,4 +1,4 @@
-package eu.raveq.lobbysystem.API;
+package eu.raveq.coinapi.API;
 
 import java.util.UUID;
 

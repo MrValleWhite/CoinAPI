@@ -1,4 +1,4 @@
-package eu.raveq.lobbysystem.mysql;
+package eu.raveq.coinapi.mysql;
 
 import com.google.common.base.Preconditions;
 import com.google.common.cache.CacheBuilder;
