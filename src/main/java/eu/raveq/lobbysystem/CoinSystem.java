@@ -1,4 +1,4 @@
-package eu.raveq.lobbysystem.coinapi;
+package eu.raveq.lobbysystem;
 
 import eu.raveq.lobbysystem.API.CoinAPI;
 import eu.raveq.lobbysystem.API.CoinAPIImpl;

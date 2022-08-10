@@ -1,4 +1,4 @@
 name: CoinAPI
 version: '${version}'
-main: eu.raveq.lobbysystem.coinapi.CoinSystem
+main: eu.raveq.lobbysystem.CoinSystem
 api-version: 1.19
