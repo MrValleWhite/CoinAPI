@@ -15,6 +15,7 @@ public class CoinSystem extends JavaPlugin {
     @Override
     public void onLoad() {
         instance = this;
+        coinAPI = new CoinAPIImpl();
         this.mysql = MySQL.newBuilder()
                 .withUrl("135.125.194.35")
                 .withPort(3306)
