@@ -3,8 +3,6 @@ plugins {
     id 'maven-publish'
 }
 
-apply plugin: 'maven-publish'
-
 group = 'de.mrwhite'
 version = '1.0-SNAPSHOT'
 
@@ -47,5 +45,17 @@ processResources {
     filteringCharset 'UTF-8'
     filesMatching('plugin.yml') {
         expand props
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
     }
 }
