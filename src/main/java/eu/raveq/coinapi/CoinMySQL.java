@@ -39,6 +39,7 @@ public class CoinMySQL {
             Bukkit.getConsoleSender().sendMessage("§8| §bCoinSystem §8» " +
                     "§7Bei der Verbindung ist ein Fehler aufgetreten §8 | §cMYSQL");
         }
+
     }
 
     public void close() {

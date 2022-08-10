@@ -5,10 +5,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerRecipeDiscoverEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class CoinMain extends JavaPlugin {
+public class CoinMain extends JavaPlugin implements Listener {
 
     public static final String pr = "§8| §bCoin's §8» ";
     public static final String noperm = pr + "§cDazu hast Du keine Rechte!";
@@ -19,6 +18,15 @@ public class CoinMain extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        Bukkit.getConsoleSender().sendMessage("§8| §bCoin's §8» §7Plugin wurde §egeladen");
+    }
+
+    @Override
+    public void onDisable() {
+        closeMySQL();
+    }
+
+    public void MySQLSettings() {
         saveConfig();
         ins = this;
         mysql = new CoinMySQL();
@@ -33,12 +41,12 @@ public class CoinMain extends JavaPlugin {
 
         saveConfig();
         connectMySQL();
-        Bukkit.getConsoleSender().sendMessage("§8| §bCoin's §8» §7Plugin wurde §egeladen");
     }
 
-    @Override
-    public void onDisable() {
-        closeMySQL();
+    @EventHandler
+    public void onJoin(PlayerJoinEvent event) {
+        Player player = event.getPlayer();
+        CoinAPI.createPlayer(player.getUniqueId().toString());
     }
 
     public static CoinMain getInstance() {
