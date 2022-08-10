@@ -1,4 +1,4 @@
-package eu.raveq.lobbysystem;
+package eu.raveq.lobbysystem.mysql;
 
 import com.google.common.base.Preconditions;
 import com.google.common.cache.CacheBuilder;

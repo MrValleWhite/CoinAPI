@@ -1,5 +1,9 @@
 package eu.raveq.lobbysystem;
 
+import eu.raveq.lobbysystem.API.CoinAPI;
+import eu.raveq.lobbysystem.API.CoinAPIImpl;
+import eu.raveq.lobbysystem.API.ICoinAPI;
+import eu.raveq.lobbysystem.mysql.MySQL;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class CoinSystem extends JavaPlugin {

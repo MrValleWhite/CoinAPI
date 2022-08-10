@@ -1,4 +1,7 @@
-package eu.raveq.lobbysystem;
+package eu.raveq.lobbysystem.API;
+
+import eu.raveq.lobbysystem.CoinSystem;
+import eu.raveq.lobbysystem.mysql.MySQL;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

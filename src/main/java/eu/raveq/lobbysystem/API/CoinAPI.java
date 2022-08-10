@@ -1,4 +1,4 @@
-package eu.raveq.lobbysystem;
+package eu.raveq.lobbysystem.API;
 
 public class CoinAPI {
 
