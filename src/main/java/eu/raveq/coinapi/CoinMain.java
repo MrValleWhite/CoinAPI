@@ -18,15 +18,6 @@ public class CoinMain extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        Bukkit.getConsoleSender().sendMessage("§8| §bCoin's §8» §7Plugin wurde §egeladen");
-    }
-
-    @Override
-    public void onDisable() {
-        closeMySQL();
-    }
-
-    public void MySQLSettings() {
         saveConfig();
         ins = this;
         mysql = new CoinMySQL();
@@ -41,6 +32,12 @@ public class CoinMain extends JavaPlugin implements Listener {
 
         saveConfig();
         connectMySQL();
+        Bukkit.getConsoleSender().sendMessage("§8| §bCoin's §8» §7Plugin wurde §egeladen");
+    }
+
+    @Override
+    public void onDisable() {
+        closeMySQL();
     }
 
     @EventHandler
