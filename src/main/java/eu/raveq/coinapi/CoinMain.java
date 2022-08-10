@@ -8,7 +8,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRecipeDiscoverEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class CoinMain extends JavaPlugin implements Listener {
+public class CoinMain extends JavaPlugin {
 
     public static final String pr = "§8| §bCoin's §8» ";
     public static final String noperm = pr + "§cDazu hast Du keine Rechte!";
@@ -34,19 +34,11 @@ public class CoinMain extends JavaPlugin implements Listener {
         saveConfig();
         connectMySQL();
         Bukkit.getConsoleSender().sendMessage("§8| §bCoin's §8» §7Plugin wurde §egeladen");
-        Bukkit.getPluginManager().registerEvents(this, this);
     }
 
     @Override
     public void onDisable() {
         closeMySQL();
-    }
-
-    @EventHandler
-    public void onJoin(PlayerJoinEvent event) {
-        Player player = event.getPlayer();
-        String uuid = player.getUniqueId().toString();
-        CoinAPI.createPlayer(uuid);
     }
 
     public static CoinMain getInstance() {
